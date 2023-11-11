@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/Sidebar.astro';
+---
+
+<Layout title="My Profile Website">
+	
+		<main class="flex w-full h-full p-5 justify-center align-middle m-auto">
+			<div class="container px-5 py-auto main" >
+				<div class="grid grid-cols-1">
+					<!-- component -->
+					<div class="py-2">
+						<div class="container">
+							<div class="mx-auto max-w-4xl sm:text-center">
+								<img src="assets/images/landing/index-21.png" class="w-40 mx-auto" alt="">
+								<h2 class="md:text-5xl text-3xl font-semibold tracking-tight">Social Media</h2>
+								<div class="flex justify-center">
+									<p class="md:w-1/2 mt-6 text-xl/8 font-medium text-gray-500 dark:text-gray-400">Link ke social mediaku</p>
+								</div>
+							</div>
+
+							<div class="grid lg:grid-cols-3 md:grid-cols-2 grikd-cols-1 gap-6 mt-5">
+								<div>
+									<div class="p-7 rounded-xl bg-amber-100 bg-red-600">
+										
+										<a href="https://www.instagram.com/keinan_2117/" class="py-3 flex items-center justify-center w-full font-semibold rounded-md bg-white hover:bg-purple-500 hover:text-white transition-all duration-500  bg-white text-black dark:hover:bg-purple-500 dark:hover:text-white ">Instagram
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class=" h-5 w-5 ms-3">
+												<path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+											</svg>
+										</a>
+									</div>
+								</div>
+
+								<div>
+									<div class="p-7 rounded-xl bg-amber-100 bg-blue-600">
+										
+										<a href="https://keinan21.itch.io/" class="py-3 flex items-center justify-center w-full font-semibold rounded-md bg-white hover:bg-purple-500 hover:text-white transition-all duration-500  bg-white text-black dark:hover:bg-purple-500 dark:hover:text-white ">itch.io
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class=" h-5 w-5 ms-3">
+												<path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+											</svg>
+										</a>
+									</div>
+								</div>
+
+								<div>
+									<div class="p-7 rounded-xl bg-amber-100 bg-green-600">
+										
+										<a href="https://github.com/keinan21" class="py-3 flex items-center justify-center w-full font-semibold rounded-md bg-white hover:bg-purple-500 hover:text-white transition-all duration-500  bg-white text-black dark:hover:bg-purple-500 dark:hover:text-white ">github
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class=" h-5 w-5 ms-3">
+												<path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+											</svg>
+										</a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="justify-center align-middle mt-10 grid grid-cols-1 gap-4 mb-5">
+					<a href="./page4" class="flex justify-center align-middle mt-10 button-2 rounded-3xl">
+						<button>
+							<img src="https://www.svgrepo.com/show/469145/left-arrow.svg" alt="" class="max-h-20">
+						</button>
+					</a>
+				</div>
+
+
+			</div>
+		</main>
+	<style>
+		.main {
+			background-color: var(--light);
+			border: var(--dark) 0.3rem solid;
+			border-radius: 2rem;
+			max-width: 1000px;
+
+
+			opacity: 90%;
+		}
+
+		.button-1{
+			background-color: var(--red);
+		}
+
+		.button-2{
+			background-color: var(--blue);
+		}
+
+		.shake {
+  			animation: jump-shaking 2s infinite;
+		}
+
+		@keyframes jump-shaking {
+			0% { transform: translateX(0) }
+			25% { transform: translateY(-9px) }
+			35% { transform: translateY(-9px) rotate(17deg) }
+			55% { transform: translateY(-9px) rotate(-17deg) }
+			65% { transform: translateY(-9px) rotate(17deg) }
+			75% { transform: translateY(-9px) rotate(-17deg) }
+			100% { transform: translateY(0) rotate(0) }
+		}
+	</style>
+		
+</Layout>
+

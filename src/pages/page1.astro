@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import ava from '../images/ava.svg'
+---
+
+<Layout title="My Profile Website">
+
+		<main class="flex w-full h-full p-5 justify-center align-middle m-auto">
+			<div class="container px-5 py-auto main" >
+
+				<div class="grid md:grid-cols-2 sm:grid-cols-1 gap-4 mt-5">
+					<div class=" flex justify-center align-middle">
+						<Image src={ava}alt="" class=' w-4/5'/>
+					</div>
+					<div class="mt-1">
+						<div>
+							<h1 class="text-5xl font-black underline decoration-4 underline-offset-8 mb-1 text-center">Profil diri</h1>
+					
+							<table class="table-fixed border-separate md:border-spacing-y-3">
+							<thead>
+							  <tr>
+								<th></th>
+								<th></th>
+								<th></th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr >
+								<td  class="text-xl font-bold">Nama</td>
+								<td class="text-xl font-bold">: </td>
+								<td class="text-xl font-mid">Muhammad Yusuf Sintara</td>
+			
+							  </tr>
+							  <tr>
+								<td class="text-xl font-bold">Gender</td>
+								<td class="text-xl font-bold">: </td>
+								<td class="text-xl font-mid">Laki-laki </td>
+				
+							  </tr>
+							  <tr>
+								<td class="text-xl font-bold">Tempat / Tanggal Lahir</td>
+								<td class="text-xl font-bold">: </td>
+								<td class="text-xl font-mid">Semarang, 6 Januari 2007</td>
+							  </tr>
+							  <tr>
+								<td class="text-xl font-bold">Email</td>
+								<td class="text-xl font-bold">:</td>
+								<td class="text-xl font-mid">yusufgamesintara@gmail.com</td>
+							  </tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				<div class="justify-center align-middle mt-0 grid grid-cols-2 gap-4 mb-5">
+					<a href="./" class=" flex justify-center align-middle mt-10 button-1 rounded-3xl"><button >
+						<img src="https://www.svgrepo.com/show/469145/left-arrow.svg" alt="" class="max-h-20">
+					</button></a>
+					<a href="./page2" class="flex justify-center align-middle mt-10 button-2 rounded-3xl"><button>
+						<img src="https://www.svgrepo.com/show/469643/right-arrow.svg" alt="" class="max-h-20">
+					</button></a>
+				</div>
+
+
+			</div>
+		</main>
+	<style>
+		.main {
+			background-color: var(--light);
+			border: var(--dark) 0.3rem solid;
+			border-radius: 2rem;
+			max-width: 1000px;
+
+			opacity: 90%;
+		}
+
+		.button-1{
+			background-color: var(--red);
+		}
+
+		.button-2{
+			background-color: var(--blue);
+		}
+
+		.shake {
+  			animation: jump-shaking 2s infinite;
+		}
+
+		@keyframes jump-shaking {
+			0% { transform: translateX(0) }
+			25% { transform: translateY(-9px) }
+			35% { transform: translateY(-9px) rotate(17deg) }
+			55% { transform: translateY(-9px) rotate(-17deg) }
+			65% { transform: translateY(-9px) rotate(17deg) }
+			75% { transform: translateY(-9px) rotate(-17deg) }
+			100% { transform: translateY(0) rotate(0) }
+		}
+	</style>
+		
+</Layout>
+

@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/Sidebar.astro';
+---
+
+<Layout title="My Profile Website">
+
+		<main class="flex w-full h-full p-5 justify-center align-middle m-auto">
+			<div class="container px-5 py-auto main" >
+
+				<div class="grid md:grid-cols-1 sm:grid-cols-1 gap-4 mt-5">
+					<a href="" class="flex justify-center align-middle green rounded-3xl p-3"><button>
+						<h1 class="text-5xl font-black text-center">Riwayat Pendidikan</h1>
+					</button></a>
+					<div class="w-full mx-auto relative py-0">
+						<div class="border-l-2 border-blue-900 mt-5">
+						  <!-- Card 1 -->
+						  <div class="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-blue-600 text-white rounded-2xl mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
+							<!-- Dot Follwing the Left Vertical Line -->
+							<div class="w-5 h-5 bg-blue-600 absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0"></div>
+				  
+							<!-- Line that connecting the box with the vertical line -->
+							<div class="w-10 h-1 bg-blue-300 absolute -left-10 z-0"></div>
+				  
+							<!-- Content that showing in the box -->
+							<div class="flex-auto">
+							  <h1 class="text-lg">Taman Kanak-Kanak</h1>
+							  <h1 class="text-xl font-bold">TKIT Harapan Bunda</h1>
+							  <h3>2012-2014</h3>
+							</div>
+
+						  </div>
+				  
+						  <!-- Card 2 -->
+						  <div class="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-pink-600 text-white rounded-2xl mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
+							<!-- Dot Follwing the Left Vertical Line -->
+							<div class="w-5 h-5 bg-pink-600 absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0"></div>
+				  
+							<!-- Line that connecting the box with the vertical line -->
+							<div class="w-10 h-1 bg-pink-300 absolute -left-10 z-0"></div>
+				  
+							<!-- Content that showing in the box -->
+							<div class="flex-auto">
+							  <h1 class="text-lg">Sekolah dasar</h1>
+							  <h1 class="text-xl font-bold">SDIT Harapan Bunda</h1>
+							  <h3>2014-2019</h3>
+							</div>
+
+						  </div>
+				  
+						  <!-- Card 3 -->
+						  <div class="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-green-600 text-white rounded-2xl mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
+							<!-- Dot Follwing the Left Vertical Line -->
+							<div class="w-5 h-5 bg-green-600 absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0"></div>
+				  
+							<!-- Line that connecting the box with the vertical line -->
+							<div class="w-10 h-1 bg-green-300 absolute -left-10 z-0"></div>
+				  
+							<!-- Content that showing in the box -->
+							<div class="flex-auto">
+							  <h1 class="text-lg">Sekolah Menengah Pertama</h1>
+							  <h1 class="text-xl font-bold">SMP Negeri 9 Semarang</h1>
+							  <h3>2019-2022</h3>
+							</div>
+
+						  </div>
+				  
+						  <!-- Card 4 -->
+						  <div class="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-purple-600 text-white rounded-2xl mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
+							<!-- Dot Follwing the Left Vertical Line -->
+							<div class="w-5 h-5 bg-purple-600 absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0"></div>
+				  
+							<!-- Line that connecting the box with the vertical line -->
+							<div class="w-10 h-1 bg-purple-300 absolute -left-10 z-0"></div>
+				  
+							<!-- Content that showing in the box -->
+							<div class="flex-auto">
+							  <h1 class="text-lg">Sekolah Mengah Atas</h1>
+							  <h1 class="text-xl font-bold">SMA Negeri 2 Semarang</h1>
+							  <h3>2022-sekarang</h3>
+							</div>
+
+						  </div>
+			
+						</div>
+					  </div>
+				</div>
+				
+				
+				
+				<div class="justify-center align-middle mt-0 grid grid-cols-2 gap-4 mb-5">
+					<a href="./page1" class=" flex justify-center align-middle mt-10 button-1 rounded-3xl"><button >
+						<img src="https://www.svgrepo.com/show/469145/left-arrow.svg" alt="" class="max-h-20">
+					</button></a>
+					<a href="page3" class="flex justify-center align-middle mt-10 button-2 rounded-3xl"><button>
+						<img src="https://www.svgrepo.com/show/469643/right-arrow.svg" alt="" class="max-h-20">
+					</button></a>
+				</div>
+
+
+			</div>
+		</main>
+	<style>
+		.main {
+			background-color: var(--light);
+			border: var(--dark) 0.3rem solid;
+			border-radius: 2rem;
+			max-width: 1000px;
+
+			opacity: 90%;
+		}
+
+		.button-1{
+			background-color: var(--red);
+		}
+
+		.button-2{
+			background-color: var(--blue);
+		}
+
+		.green{
+			background-color: var(--green);
+		}
+
+		.shake {
+  			animation: jump-shaking 2s infinite;
+		}
+
+		@keyframes jump-shaking {
+			0% { transform: translateX(0) }
+			25% { transform: translateY(-9px) }
+			35% { transform: translateY(-9px) rotate(17deg) }
+			55% { transform: translateY(-9px) rotate(-17deg) }
+			65% { transform: translateY(-9px) rotate(17deg) }
+			75% { transform: translateY(-9px) rotate(-17deg) }
+			100% { transform: translateY(0) rotate(0) }
+		}
+	</style>
+		
+</Layout>
+

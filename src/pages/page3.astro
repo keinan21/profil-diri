@@ -1,0 +1,228 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import { Image } from 'astro:assets';
+import latin from '../images/latin.png'
+import yunani from '../images/yunani.png'
+import pkn from '../images/pkn.png'
+import insight from '../images/insight.png'
+---
+
+<Layout title="My Profile Website">
+
+		<main class="flex w-full h-full p-5 justify-center align-middle m-auto">
+			<div class="container px-5 py-auto main" >
+				<h1 class="text-5xl font-black underline decoration-4 underline-offset-8 mb-1 mt-5 text-center">Proyek</h1>
+				<div class="grid md:grid-cols-2 sm:grid-cols-1 gap-4 mt-5">
+					
+					<div class="mt-1">
+						<div>
+							<div class="grid grid-cols-1 gap-4 h-full">
+								<div>
+									<a href="https://keinan21.github.io/Yunani-Sebagai-Bahasa-Fisika/" class="flex justify-center align-middle red rounded-3xl mt-2 w-full h-24 transform transition cursor-pointer hover:-translate-y-0.5"><button>
+										<h2 class="text-2xl font-bold text-center my">Yunani Sebagai Bahasa Fisika (in progress)</h2>
+									</button></a>
+									<a href="https://keinan21.github.io/latin-sebagai-bahasa-fisika/" class="flex justify-center align-middle button-2 rounded-3xl mt-2 w-full h-24 transform transition cursor-pointer hover:-translate-y-0.5"><button>
+										<h2 class="text-2xl font-bold text-center my">Latin Sebagai Bahasa Fisika</h2>
+									</button></a>
+									<a href="https://keinan21.github.io/PPKN-UUD-1945/" class="flex justify-center align-middle green rounded-3xl mt-2 w-full h-24 transform transition cursor-pointer hover:-translate-y-0.5"><button>
+										<h2 class="text-2xl font-bold text-center my">Artikel PPKN UUD 1945</h2>
+									</button></a>
+									<a href="https://keinan21.github.io/competition-web.github.io-index.html/" class="flex justify-center align-middle yellow rounded-3xl mt-2 w-full h-24 transform transition cursor-pointer hover:-translate-y-0.5"><button>
+										<h2 class="text-2xl font-bold text-center my">Insight</h2>
+									</button></a>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="max-w-2xl mx-auto w-full">
+
+						<section class="slider-wrapper">
+							<button class="slide-arrow" id="slide-arrow-prev">
+							  &#8249;
+							</button>
+							<button class="slide-arrow" id="slide-arrow-next">
+							  &#8250;
+							</button>
+							<ul class="slides-container" id="slides-container">
+							  <li class="slide"><Image src={latin}alt="" class='image'/></li>
+							  <li class="slide"><Image src={yunani}alt="" class='image'/></li>
+							  <li class="slide"><Image src={insight}alt="" class='image'/></li>
+							  <li class="slide"><Image src={pkn}alt="" class='image'/></li>
+							</ul>
+						  </section>
+						  
+					
+					</div>
+				</div>
+				
+				
+				
+				<div class="justify-center align-middle mt-0 grid grid-cols-2 gap-4 mb-5">
+					<a href="./page2" class=" flex justify-center align-middle mt-10 button-1 rounded-3xl"><button >
+						<img src="https://www.svgrepo.com/show/469145/left-arrow.svg" alt="" class="max-h-20">
+					</button></a>
+					<a href="./page4" class="flex justify-center align-middle mt-10 button-2 rounded-3xl"><button>
+						<img src="https://www.svgrepo.com/show/469643/right-arrow.svg" alt="" class="max-h-20">
+					</button></a>
+				</div>
+
+
+			</div>
+		</main>
+	<style>
+		.main {
+			background-color: var(--light);
+			border: var(--dark) 0.3rem solid;
+			border-radius: 2rem;
+			max-width: 1000px;
+
+			opacity: 90%;
+		}
+
+		.button-1{
+			background-color: var(--red);
+		}
+
+		.button-2{
+			background-color: var(--blue);
+		}
+
+		.shake {
+  			animation: jump-shaking 2s infinite;
+		}
+
+		@keyframes jump-shaking {
+			0% { transform: translateX(0) }
+			25% { transform: translateY(-9px) }
+			35% { transform: translateY(-9px) rotate(17deg) }
+			55% { transform: translateY(-9px) rotate(-17deg) }
+			65% { transform: translateY(-9px) rotate(17deg) }
+			75% { transform: translateY(-9px) rotate(-17deg) }
+			100% { transform: translateY(0) rotate(0) }
+		}
+
+		.slider-wrapper {
+		margin: 0;
+		margin-top: 13px;
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+		min-height: 200px;
+		border-radius: 1.5rem;
+		}
+
+		.slides-container {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		overflow: scroll;
+		scroll-behavior: smooth;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		}
+
+		.slide-arrow {
+		position: absolute;
+		display: flex;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		height: 4rem;
+		background-color: white;
+		border: none;
+		width: 2rem;
+		font-size: 3rem;
+		padding: 0;
+		cursor: pointer;
+		opacity: 0.5;
+		transition: opacity 100ms;
+		}
+
+		.slide-arrow:hover,
+		.slide-arrow:focus {
+		opacity: 1;
+		}
+
+		#slide-arrow-prev {
+		left: 0;
+		padding-left: 0.25rem;
+		border-radius: 0 2rem 2rem 0;
+		}
+
+		#slide-arrow-next {
+		right: 0;
+		padding-left: 0.75rem;
+		border-radius: 2rem 0 0 2rem;
+		}
+
+		.slide {
+		width: 100%;
+		height: 100%;
+		flex: 1 0 100%;
+		}
+
+		.slide:nth-child(1) {
+		background-color: #49b293;
+		}
+
+		.slide:nth-child(2) {
+		background-color: #b03532;
+		}
+
+		.slide:nth-child(3) {
+		background-color: #6a478f;
+		margin: 0;
+		}
+
+		.slide:nth-child(4) {
+		background-color: #da6f2b;
+		}
+
+		.slide .image{
+	
+			width: 100%;
+			height: 100%;
+			border: 5px var(--red) solid;
+			border-radius: 1.5rem;
+		}
+
+		.slide:nth-child(2) .image{
+
+			border: 5px var(--green) solid;
+
+		}
+		.slide:nth-child(3) .image{
+
+			border: 5px var(--yellow) solid;
+
+		}
+		.slide:nth-child(4) .image{
+
+			border: 5px var(--blue) solid;
+
+		}
+
+	</style>
+	<script>
+			const slidesContainer = document.getElementById("slides-container");
+			const slide = document.querySelector(".slide");
+			const prevButton = document.getElementById("slide-arrow-prev");
+			const nextButton = document.getElementById("slide-arrow-next");
+
+			nextButton.addEventListener("click", () => {
+			const slideWidth = slide.clientWidth;
+			slidesContainer.scrollLeft += slideWidth;
+			});
+
+			prevButton.addEventListener("click", () => {
+			const slideWidth = slide.clientWidth;
+			slidesContainer.scrollLeft -= slideWidth;
+			});
+	</script>
+		
+</Layout>
+
